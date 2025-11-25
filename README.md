@@ -2,6 +2,11 @@
 
 A confidential airdrop application built on Zama Protocol FHEVM (Fully Homomorphic Encryption Virtual Machine) where recipients receive encrypted token amounts and cannot see their balance until they explicitly decrypt it.
 
+<img width="862" height="915" alt="Screenshot_5" src="https://github.com/user-attachments/assets/8ddb846a-b27b-4c13-b92c-b765bfe90f04" />
+<img width="1261" height="781" alt="Screenshot_1" src="https://github.com/user-attachments/assets/84e3eba4-eea7-4492-83d9-852237c6bdba" />
+
+tx example: https://sepolia.etherscan.io/tx/0x8a11dd2d6c1bbf97e7ac878b133a954cd47f99a3470af7092d9d8e456f5065b0
+
 ## Features
 
 - **Encrypted Amounts**: All airdrop amounts are encrypted using FHE (Fully Homomorphic Encryption)
