@@ -1,4 +1,4 @@
-# Confidential Airdrop
+# Confidential Airdrop Minter
 
 A confidential airdrop application built on Zama Protocol FHEVM (Fully Homomorphic Encryption Virtual Machine) where recipients receive encrypted token amounts and cannot see their balance until they explicitly decrypt it.
 
