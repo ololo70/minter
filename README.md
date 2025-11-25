@@ -136,6 +136,29 @@ npm run build
 - **Vite**: Build tool with FHE support
 - **Ethers.js v6**: Ethereum library
 
+## Zama Dependencies
+
+### Smart Contract (Solidity)
+```json
+{
+  "dependencies": {
+    "@fhevm/solidity": "^0.9.1"
+  },
+  "devDependencies": {
+    "@fhevm/hardhat-plugin": "^0.3.0-1"
+  }
+}
+```
+
+### Frontend (JavaScript/TypeScript)
+```json
+{
+  "dependencies": {
+    "@zama-fhe/relayer-sdk": "^0.3.0-5"
+  }
+}
+```
+
 ## Smart Contract Overview
 
 The `ConfidentialAirdrop` contract provides:
@@ -150,16 +173,17 @@ The `ConfidentialAirdrop` contract provides:
 
 - **End-to-End Encryption**: Amounts are encrypted before leaving the browser
 - **Access Control**: Only recipients can access their encrypted balances
-- **Owner-Only Airdrops**: Only the contract owner can execute airdrops
+- **Open Airdrops**: Anyone can send airdrops to recipients
 - **EIP-712 Signatures**: Secure decryption with typed data signatures
 
 ## Deployed Contract
 
-- **Contract Address**: `0x982DC8c40AF7a9A33F5019a07faac528ece9B6E0`
+- **Contract Address**: `0x7ba4767478E29D902f4D2a3f3284E982a7342A9b`
 - **Network**: Ethereum Sepolia Testnet
 - **Chain ID**: 11155111
 - **Gateway Chain ID**: 10901 (Zama)
 - **RPC**: https://ethereum-sepolia-rpc.publicnode.com
+- **Example Transaction**: [0x18f91a7b...](https://sepolia.etherscan.io/tx/0x18f91a7ba1f2b741765c85999aa47b13c4c97cdf99920349b02f4b0c92d65943)
 
 
 ## License
