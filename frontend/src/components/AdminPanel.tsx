@@ -41,8 +41,8 @@ export function AdminPanel({ contractAddress, signer, userAddress, isOwner }: Ad
         throw new Error("No recipients provided");
       }
 
-      const encryptedAmounts: string[] = [];
-      const inputProofs: string[] = [];
+      const encryptedAmounts: Uint8Array[] = [];
+      const inputProofs: Uint8Array[] = [];
 
       for (let i = 0; i < amountList.length; i++) {
         const amount = BigInt(amountList[i]);
