@@ -153,37 +153,14 @@ The `ConfidentialAirdrop` contract provides:
 - **Owner-Only Airdrops**: Only the contract owner can execute airdrops
 - **EIP-712 Signatures**: Secure decryption with typed data signatures
 
-## Network Information
+## Deployed Contract
 
+- **Contract Address**: `0x982DC8c40AF7a9A33F5019a07faac528ece9B6E0`
 - **Network**: Ethereum Sepolia Testnet
 - **Chain ID**: 11155111
 - **Gateway Chain ID**: 10901 (Zama)
 - **RPC**: https://ethereum-sepolia-rpc.publicnode.com
 
-## Troubleshooting
-
-### WASM Loading Issues
-
-Ensure your `vite.config.ts` includes the required plugins:
-- `vite-plugin-wasm`
-- `vite-plugin-top-level-await`
-- `vite-plugin-node-polyfills`
-
-### Cross-Origin Errors
-
-The Vite dev server includes required COOP/COEP headers. If issues persist, check browser console for specific errors.
-
-### FHEVM Not Initializing
-
-1. Ensure MetaMask is installed and connected
-2. Switch to Sepolia network
-3. Refresh the page
-
-## Resources
-
-- [Zama FHEVM Documentation](https://docs.zama.ai/fhevm)
-- [Relayer SDK Reference](https://docs.zama.ai/fhevm/frontend)
-- [Contract Addresses](https://docs.zama.ai/fhevm/references/addresses)
 
 ## License
 
