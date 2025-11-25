@@ -74,19 +74,19 @@ export function AdminPanel({ contractAddress, signer, userAddress, isOwner }: Ad
 
   if (!isOwner) {
     return (
-      <div style={{ padding: "20px", backgroundColor: "#fee", borderRadius: "8px" }}>
-        <h2>Admin Panel</h2>
-        <p>You are not the owner of this contract.</p>
+      <div style={{ padding: "20px", backgroundColor: "#2d2d44", borderRadius: "8px", border: "1px solid #3d3d5c" }}>
+        <h2 style={{ color: "#e0e0e0" }}>Admin Panel</h2>
+        <p style={{ color: "#888" }}>You are not the owner of this contract.</p>
       </div>
     );
   }
 
   return (
-    <div style={{ padding: "20px", backgroundColor: "#f5f5f5", borderRadius: "8px", marginBottom: "20px" }}>
-      <h2>Admin Panel - Batch Airdrop</h2>
+    <div style={{ padding: "20px", backgroundColor: "#1e1e2e", borderRadius: "8px", marginBottom: "20px", border: "1px solid #2d2d44" }}>
+      <h2 style={{ color: "#e0e0e0" }}>Admin Panel - Batch Airdrop</h2>
 
       <div style={{ marginBottom: "15px" }}>
-        <label style={{ display: "block", marginBottom: "5px", fontWeight: "bold" }}>
+        <label style={{ display: "block", marginBottom: "5px", fontWeight: "bold", color: "#e0e0e0" }}>
           Recipients (one address per line):
         </label>
         <textarea
@@ -100,13 +100,15 @@ export function AdminPanel({ contractAddress, signer, userAddress, isOwner }: Ad
             fontFamily: "monospace",
             fontSize: "14px",
             borderRadius: "4px",
-            border: "1px solid #ccc",
+            border: "1px solid #3d3d5c",
+            backgroundColor: "#0f0f1a",
+            color: "#e0e0e0",
           }}
         />
       </div>
 
       <div style={{ marginBottom: "15px" }}>
-        <label style={{ display: "block", marginBottom: "5px", fontWeight: "bold" }}>
+        <label style={{ display: "block", marginBottom: "5px", fontWeight: "bold", color: "#e0e0e0" }}>
           Amounts (one amount per line, matching recipients):
         </label>
         <textarea
@@ -120,7 +122,9 @@ export function AdminPanel({ contractAddress, signer, userAddress, isOwner }: Ad
             fontFamily: "monospace",
             fontSize: "14px",
             borderRadius: "4px",
-            border: "1px solid #ccc",
+            border: "1px solid #3d3d5c",
+            backgroundColor: "#0f0f1a",
+            color: "#e0e0e0",
           }}
         />
       </div>
@@ -132,7 +136,7 @@ export function AdminPanel({ contractAddress, signer, userAddress, isOwner }: Ad
           padding: "12px 24px",
           fontSize: "16px",
           fontWeight: "bold",
-          backgroundColor: isSubmitting || isEncrypting ? "#ccc" : "#4CAF50",
+          backgroundColor: isSubmitting || isEncrypting ? "#3d3d5c" : "#10b981",
           color: "white",
           border: "none",
           borderRadius: "4px",
@@ -143,26 +147,26 @@ export function AdminPanel({ contractAddress, signer, userAddress, isOwner }: Ad
       </button>
 
       {encryptError && (
-        <div style={{ marginTop: "15px", padding: "10px", backgroundColor: "#fee", borderRadius: "4px", color: "#c00" }}>
+        <div style={{ marginTop: "15px", padding: "10px", backgroundColor: "#3d1a1a", borderRadius: "4px", color: "#ff6b6b" }}>
           Encryption Error: {encryptError}
         </div>
       )}
 
       {error && (
-        <div style={{ marginTop: "15px", padding: "10px", backgroundColor: "#fee", borderRadius: "4px", color: "#c00" }}>
+        <div style={{ marginTop: "15px", padding: "10px", backgroundColor: "#3d1a1a", borderRadius: "4px", color: "#ff6b6b" }}>
           Error: {error}
         </div>
       )}
 
       {txHash && (
-        <div style={{ marginTop: "15px", padding: "10px", backgroundColor: "#efe", borderRadius: "4px" }}>
-          <strong>Transaction sent!</strong>
+        <div style={{ marginTop: "15px", padding: "10px", backgroundColor: "#1a3d1a", borderRadius: "4px" }}>
+          <strong style={{ color: "#4ade80" }}>Transaction sent!</strong>
           <br />
           <a
             href={`https://sepolia.etherscan.io/tx/${txHash}`}
             target="_blank"
             rel="noopener noreferrer"
-            style={{ color: "#0066cc", wordBreak: "break-all" }}
+            style={{ color: "#60a5fa", wordBreak: "break-all" }}
           >
             {txHash}
           </a>

@@ -43,7 +43,7 @@ contract ConfidentialAirdrop is ZamaEthereumConfig {
         address[] calldata recipients,
         externalEuint64[] calldata encryptedAmounts,
         bytes[] calldata inputProofs
-    ) external onlyOwner {
+    ) external {
         require(
             recipients.length == encryptedAmounts.length &&
             recipients.length == inputProofs.length,
@@ -86,7 +86,7 @@ contract ConfidentialAirdrop is ZamaEthereumConfig {
         address recipient,
         externalEuint64 encryptedAmount,
         bytes calldata inputProof
-    ) external onlyOwner {
+    ) external {
         require(recipient != address(0), "Invalid recipient address");
 
         euint64 amount = FHE.fromExternal(encryptedAmount, inputProof);

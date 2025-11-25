@@ -41,12 +41,12 @@ function App() {
   if (!CONTRACT_ADDRESS) {
     return (
       <div style={{ padding: "40px", textAlign: "center" }}>
-        <h1>Confidential Airdrop</h1>
-        <div style={{ marginTop: "20px", padding: "20px", backgroundColor: "#fee", borderRadius: "8px" }}>
-          <p style={{ color: "#c00", fontWeight: "bold" }}>
+        <h1 style={{ color: "#e0e0e0" }}>Confidential Airdrop</h1>
+        <div style={{ marginTop: "20px", padding: "20px", backgroundColor: "#3d1a1a", borderRadius: "8px" }}>
+          <p style={{ color: "#ff6b6b", fontWeight: "bold" }}>
             Error: Contract address not configured
           </p>
-          <p>Please set VITE_CONTRACT_ADDRESS in your .env file</p>
+          <p style={{ color: "#e0e0e0" }}>Please set VITE_CONTRACT_ADDRESS in your .env file</p>
         </div>
       </div>
     );
@@ -55,8 +55,8 @@ function App() {
   return (
     <div style={{ maxWidth: "900px", margin: "0 auto", padding: "40px 20px" }}>
       <header style={{ marginBottom: "40px", textAlign: "center" }}>
-        <h1 style={{ fontSize: "36px", marginBottom: "10px" }}>Confidential Airdrop</h1>
-        <p style={{ fontSize: "16px", color: "#666" }}>
+        <h1 style={{ fontSize: "36px", marginBottom: "10px", color: "#e0e0e0" }}>Confidential Airdrop</h1>
+        <p style={{ fontSize: "16px", color: "#888" }}>
           Batch airdrops with encrypted amounts using Zama FHEVM
         </p>
       </header>
@@ -69,7 +69,7 @@ function App() {
               padding: "15px 30px",
               fontSize: "18px",
               fontWeight: "bold",
-              backgroundColor: "#2196F3",
+              backgroundColor: "#6c5ce7",
               color: "white",
               border: "none",
               borderRadius: "8px",
@@ -79,29 +79,29 @@ function App() {
             Connect Wallet
           </button>
           {walletError && (
-            <div style={{ marginTop: "20px", padding: "15px", backgroundColor: "#fee", borderRadius: "8px" }}>
-              <p style={{ color: "#c00", margin: 0 }}>{walletError}</p>
+            <div style={{ marginTop: "20px", padding: "15px", backgroundColor: "#3d1a1a", borderRadius: "8px" }}>
+              <p style={{ color: "#ff6b6b", margin: 0 }}>{walletError}</p>
             </div>
           )}
         </div>
       ) : (
         <>
-          <div style={{ padding: "15px", backgroundColor: "#e3f2fd", borderRadius: "8px", marginBottom: "30px" }}>
-            <div style={{ marginBottom: "10px" }}>
+          <div style={{ padding: "15px", backgroundColor: "#1e1e2e", borderRadius: "8px", marginBottom: "30px", border: "1px solid #2d2d44" }}>
+            <div style={{ marginBottom: "10px", color: "#e0e0e0" }}>
               <strong>Connected:</strong>{" "}
-              <span style={{ fontFamily: "monospace", fontSize: "14px" }}>{address}</span>
+              <span style={{ fontFamily: "monospace", fontSize: "14px", color: "#a0a0a0" }}>{address}</span>
             </div>
-            <div style={{ marginBottom: "10px" }}>
+            <div style={{ marginBottom: "10px", color: "#e0e0e0" }}>
               <strong>Contract:</strong>{" "}
-              <span style={{ fontFamily: "monospace", fontSize: "14px" }}>{CONTRACT_ADDRESS}</span>
+              <span style={{ fontFamily: "monospace", fontSize: "14px", color: "#a0a0a0" }}>{CONTRACT_ADDRESS}</span>
             </div>
-            <div style={{ marginBottom: "10px" }}>
+            <div style={{ marginBottom: "10px", color: "#e0e0e0" }}>
               <strong>Owner:</strong>{" "}
-              <span style={{ fontFamily: "monospace", fontSize: "14px" }}>
+              <span style={{ fontFamily: "monospace", fontSize: "14px", color: "#a0a0a0" }}>
                 {contractOwner || "Loading..."}
               </span>
             </div>
-            <div>
+            <div style={{ color: "#e0e0e0" }}>
               <strong>FHEVM Status:</strong>{" "}
               <span
                 style={{
@@ -111,36 +111,36 @@ function App() {
                   fontWeight: "bold",
                   backgroundColor:
                     fhevmStatus === "ready"
-                      ? "#c8e6c9"
+                      ? "#1a3d1a"
                       : fhevmStatus === "loading"
-                      ? "#fff9c4"
+                      ? "#3d3d1a"
                       : fhevmStatus === "error"
-                      ? "#ffcdd2"
-                      : "#e0e0e0",
+                      ? "#3d1a1a"
+                      : "#2d2d2d",
                   color:
                     fhevmStatus === "ready"
-                      ? "#2e7d32"
+                      ? "#4ade80"
                       : fhevmStatus === "loading"
-                      ? "#f57f17"
+                      ? "#fbbf24"
                       : fhevmStatus === "error"
-                      ? "#c62828"
-                      : "#424242",
+                      ? "#ff6b6b"
+                      : "#888",
                 }}
               >
                 {fhevmStatus.toUpperCase()}
               </span>
             </div>
             {fhevmError && (
-              <div style={{ marginTop: "10px", padding: "10px", backgroundColor: "#ffebee", borderRadius: "4px" }}>
-                <p style={{ color: "#c62828", margin: 0, fontSize: "14px" }}>{fhevmError}</p>
+              <div style={{ marginTop: "10px", padding: "10px", backgroundColor: "#3d1a1a", borderRadius: "4px" }}>
+                <p style={{ color: "#ff6b6b", margin: 0, fontSize: "14px" }}>{fhevmError}</p>
               </div>
             )}
           </div>
 
           {fhevmStatus === "loading" && (
             <div style={{ textAlign: "center", padding: "40px" }}>
-              <p style={{ fontSize: "18px", color: "#666" }}>Initializing FHEVM SDK...</p>
-              <p style={{ fontSize: "14px", color: "#999" }}>This may take a moment</p>
+              <p style={{ fontSize: "18px", color: "#888" }}>Initializing FHEVM SDK...</p>
+              <p style={{ fontSize: "14px", color: "#666" }}>This may take a moment</p>
             </div>
           )}
 
@@ -163,8 +163,8 @@ function App() {
         </>
       )}
 
-      <footer style={{ marginTop: "60px", paddingTop: "20px", borderTop: "1px solid #e0e0e0", textAlign: "center" }}>
-        <p style={{ fontSize: "14px", color: "#999" }}>
+      <footer style={{ marginTop: "60px", paddingTop: "20px", borderTop: "1px solid #2d2d44", textAlign: "center" }}>
+        <p style={{ fontSize: "14px", color: "#666" }}>
           Built with Zama FHEVM | Confidential computing on Ethereum Sepolia
         </p>
       </footer>
